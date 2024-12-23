@@ -8,7 +8,7 @@ import GuiWindow from "./components/GuiWindow";
 import ContextMenu from "./components/ContextMenu";
 import "./App.css";
 import ProjectGui from "./components/ProjectGui";
-import Github from "./components/GitHub";
+import Github from "./components/Github";
 import Contact from "./components/Contact";
 import Terminal from "./components/Terminal";
 
