@@ -43,9 +43,9 @@ const Header = () => {
   };
 
   const networks = [
-    { name: "Home Network", strength: "src/assets/strong-signal.jpg" },
-    { name: "Office WiFi", strength: "src/assets/medium-signal.jpg" },
-    { name: "Public WiFi", strength: "src/assets/weak-signal.jpg" },
+    { name: "Home Network", strength: "/assets/strong-signal.jpg" },
+    { name: "Office WiFi", strength: "/assets/medium-signal.jpg" },
+    { name: "Public WiFi", strength: "/assets/weak-signal.jpg" },
   ];
 
   return (
@@ -53,7 +53,7 @@ const Header = () => {
       <div className="flex sm:flex-row items-center backdrop-blur-lg bg-white/10 shadow h-9 px-3 justify-between">
         {/* Logo Section */}
         <div className="flex items-center sm:mb-0">
-          <img src="src/assets/logo.jpg" alt="Logo" className="w-6 h-6" />
+          <img src="/assets/logo.jpg" alt="Logo" className="w-6 h-6" />
         </div>
 
         {/* Buttons Section */}
@@ -64,19 +64,19 @@ const Header = () => {
               className="p-1 hover:bg-white/20 rounded transition"
               onClick={() => toggleMenu("translate")}
             >
-              <img src="src/assets/translate.jpg" alt="Translate" className=" w-4 h-4 sm:w-5 sm:h-5" />
+              <img src="/assets/translate.jpg" alt="Translate" className=" w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             {activeMenu === "translate" && (
               <div className="absolute top-9 right-0 bg-white/10 text-white backdrop-blur-lg shadow rounded w-36 sm:w-40">
                 <ul className="py-1 text-sm">
                   <li className="px-2 sm:px-4 py-2 hover:backdrop-blur-md cursor-pointer flex items-center gap-1">
-                    <img src="src/assets/english.jpg" className="w-7 sm:w-8" /> English
+                    <img src="/assets/english.jpg" className="w-7 sm:w-8" /> English
                   </li>
                   <li className="px-2 sm:px-4 py-2 hover:backdrop-blur-md cursor-pointer flex items-center gap-1">
-                    <img src="src/assets/spain.jpg" className="w-7 sm:w-8" /> Español
+                    <img src="/assets/spain.jpg" className="w-7 sm:w-8" /> Español
                   </li>
                   <li className="px-2 sm:px-4 py-2 hover:backdrop-blur-md cursor-pointer flex items-center gap-1">
-                    <img src="src/assets/france.jpg" className="w-7 sm:w-8" /> Français
+                    <img src="/assets/france.jpg" className="w-7 sm:w-8" /> Français
                   </li>
                 </ul>
               </div>
@@ -90,7 +90,7 @@ const Header = () => {
               onClick={() => toggleMenu("wifi")}
             >
               <img
-                src={wifiDisabled ? "src/assets/disable-wifi.jpg" : "src/assets/wifi.jpg"}
+                src={wifiDisabled ? "/assets/disable-wifi.jpg" : "/assets/wifi.jpg"}
                 alt="WiFi"
                 className=" w-4 h-4 sm:w-5 sm:h-5"
               />
@@ -117,7 +117,7 @@ const Header = () => {
                       {networks.map((network, index) => (
                         <li key={index} className="flex justify-between items-center py-1">
                           <span>{network.name}</span>
-                          <img src="src/assets/wifi.jpg" alt="Signal Strength" className="w-4 sm:w-5 h-4 sm:h-5" />
+                          <img src="/assets/wifi.jpg" alt="Signal Strength" className="w-4 sm:w-5 h-4 sm:h-5" />
                         </li>
                       ))}
                     </ul>
@@ -134,7 +134,7 @@ const Header = () => {
               onClick={() => toggleMenu("sound")}
             >
               <img
-                src={soundMuted ? "src/assets/mute.jpg" : "src/assets/sound.jpg"}
+                src={soundMuted ? "/assets/mute.jpg" : "/assets/sound.jpg"}
                 alt="Sound"
                 className=" w-4 h-4 sm:w-5 sm:h-5"
               />

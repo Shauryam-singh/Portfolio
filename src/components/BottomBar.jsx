@@ -19,7 +19,7 @@ function BottomBar({ onAppClick, openGuis, minimizedGuis }) {
                     {label}
                   </p>
                   <img
-                    src={`../src/assets/${label.toLowerCase()}.jpg`}
+                    src={`/assets/${label.toLowerCase()}.jpg`}
                     className="w-10 h-10 sm:w-12 sm:h-12"
                     alt={label}
                   />

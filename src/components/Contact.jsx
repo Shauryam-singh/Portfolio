@@ -11,7 +11,7 @@ function Contact() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <img src="../src/assets/contact.jpg" alt="" className="w-24 sm:w-36" />
+        <img src="/assets/contact.jpg" alt="" className="w-24 sm:w-36" />
       </motion.div>
 
       {/* Title */}

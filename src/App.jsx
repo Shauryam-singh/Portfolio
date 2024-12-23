@@ -18,14 +18,14 @@ function App() {
   const [maximizedGuis, setMaximizedGuis] = useState({});
   const [minimizedGuis, setMinimizedGuis] = useState([]);
   const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
-  const [currentBackground, setCurrentBackground] = useState("src/assets/background.jpg");
+  const [currentBackground, setCurrentBackground] = useState("/assets/background.jpg");
   const [focusedGui, setFocusedGui] = useState(null); // Track the focused GUI
   const backgroundOptions = [
-    "src/assets/background.jpg",
-    "src/assets/bg1.jpg",
-    "src/assets/bg2.jpg",
-    "src/assets/bg3.jpg",
-    "src/assets/bg4.jpg",
+    "/assets/background.jpg",
+    "/assets/bg1.jpg",
+    "/assets/bg2.jpg",
+    "/assets/bg3.jpg",
+    "/assets/bg4.jpg",
   ];
 
   const handleSelectBackground = (newBg) => {
@@ -33,13 +33,13 @@ function App() {
   };
 
   const guiDimensions = {
-    About: { width: "30vw", height: "20vh", icon: "src/assets/about.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%)" },
-    Skills: { width: "35vw", height: "25vh", icon: "src/assets/skills.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
-    Projects: { width: "40vw", height: "30vh", icon: "src/assets/projects.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
-    Terminal: { width: "45vw", height: "35vh", icon: "src/assets/terminal.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
-    Github: { width: "45vw", height: "35vh", icon: "src/assets/github.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
-    Contact: { width: "45vw", height: "35vh", icon: "src/assets/contact.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
-    Customize: { width: "45vw", height: "35vh", icon: "src/assets/customize.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
+    About: { width: "30vw", height: "20vh", icon: "/assets/about.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%)" },
+    Skills: { width: "35vw", height: "25vh", icon: "/assets/skills.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
+    Projects: { width: "40vw", height: "30vh", icon: "/assets/projects.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
+    Terminal: { width: "45vw", height: "35vh", icon: "/assets/terminal.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
+    Github: { width: "45vw", height: "35vh", icon: "/assets/github.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
+    Contact: { width: "45vw", height: "35vh", icon: "/assets/contact.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
+    Customize: { width: "45vw", height: "35vh", icon: "/assets/customize.jpg", gradient: "radial-gradient(circle, rgba(24,50,92,1) 0%, rgba(12,25,46,1) 100%" },
   };
 
   const handleOpenGui = (guiType) => {
