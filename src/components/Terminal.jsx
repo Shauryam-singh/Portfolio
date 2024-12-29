@@ -11,9 +11,9 @@ function Terminal() {
   const terminalRef = useRef(null);
 
   // Custom welcome message and initial instructions
-  const welcomeMessage = `Welcome to OS 1.0 (x64)
+  const welcomeMessage = `Weelcome to OS 1.0 (x64)
 
-*Website: xyz
+*Website: portfolio-shauryam.vercel.app
 *Support: shauryamsingh9@gmail.com
 
 (i) Type "help" to start!`;
@@ -58,7 +58,7 @@ function Terminal() {
       } else if (currentCommand === "clear") {
         setText(`Welcome to OS 1.0 (x64)
 
-*Website: xyz
+*Website: portfolio-shauryam.vercel.app
 *Support: shauryamsingh9@gmail.com
 
 (i) Type "help" to start!`);  // Clear terminal text

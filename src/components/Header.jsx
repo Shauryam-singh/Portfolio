@@ -52,8 +52,8 @@ const Header = () => {
     <div className="header-animation absolute top-0 left-0 w-full z-50">
       <div className="flex sm:flex-row items-center backdrop-blur-lg bg-white/10 shadow h-9 px-3 justify-between">
         {/* Logo Section */}
-        <div className="flex items-center sm:mb-0">
-          <img src="/assets/logo.jpg" alt="Logo" className="w-6 h-6" />
+        <div className="flex items-center">
+          <img src="/assets/logo.jpg" alt="Logo" className="w-14" />
         </div>
 
         {/* Buttons Section */}

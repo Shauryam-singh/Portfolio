@@ -23,6 +23,10 @@ function AboutGui() {
     visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.3 } },
   };
 
+  const handleCvClick = () => {
+    window.location.href = "/assets/ShauryamSingh_Resume.pdf";
+  };
+
   return (
     <div className="flex flex-col justify-center items-center p-6 sm:p-8 md:p-10 lg:p-12 text-white rounded-lg max-w-full sm:max-w-2xl mx-auto">
       <motion.h1
@@ -49,7 +53,7 @@ function AboutGui() {
         variants={textVariant}
         transition={{ delay: 0.4 }}
       >
-        I'm a <strong>18-year-old Front End Developer</strong> specializing in technologies like <b>React</b>, <b>Next.js</b>, <b>JavaScript</b>, <b>Python</b>, and <b>PHP</b>.
+        I'm a <strong>18-year-old Front End Developer</strong> specializing in technologies like <b>React</b>, <b>Next.js</b>, <b>JavaScript</b>, <b>Html</b>, and <b>CSS</b>.
         I thrive on solving complex problems, writing clean code, and constantly learning to stay ahead of industry trends.
       </motion.p>
       <motion.p
@@ -59,7 +63,7 @@ function AboutGui() {
         variants={textVariant}
         transition={{ delay: 0.6 }}
       >
-        With a strong background in both front-end and back-end development, I enjoy creating impactful, user-centric web applications and contributing to high-performance software systems.
+        With a strong background in front-end, I enjoy creating impactful, user-centric web applications and contributing to high-performance software systems.
       </motion.p>
       <motion.p
         className="text-sm sm:text-base leading-relaxed mb-4 text-center"
@@ -77,6 +81,7 @@ function AboutGui() {
         initial="hidden"
         animate={showButton ? "visible" : "hidden"}
         variants={buttonVariant}
+        onClick={handleCvClick}
       >
         My CV
       </motion.button>
