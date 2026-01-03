@@ -1,68 +1,131 @@
+"use client";
+import { motion } from "framer-motion";
+import { 
+  FiLayout, FiCode, FiServer, 
+  FiDatabase, FiShield, FiCpu, FiArrowRight 
+} from "react-icons/fi";
+
+const services = [
+  {
+    title: "Interface Design",
+    desc: "Crafting high-fidelity, user-centric wireframes and digital interfaces. I prioritize clean aesthetics and fluid responsiveness across all device breakpoints.",
+    tech: ["Figma", "UX Strategy", "Responsive"],
+    icon: <FiLayout />,
+  },
+  {
+    title: "Frontend Engineering",
+    desc: "Developing fast, interactive client-side applications. I use modern component architectures to build scalable interfaces that feel instantaneous.",
+    tech: ["React.js", "Node.js", "Tailwind"],
+    icon: <FiCode />,
+  },
+  {
+    title: "Backend Architecture",
+    desc: "Engineering the invisible core of your application. I build robust server environments and handle complex business logic to ensure 99.9% reliability.",
+    tech: ["Node.js", "Express", "Python"],
+    icon: <FiCpu />,
+  },
+  {
+    title: "Database Systems",
+    desc: "Designing optimized data schemas for speed and integrity. I implement relational and non-relational structures tailored to your specific query needs.",
+    tech: ["PostgreSQL", "MongoDB", "SQL"],
+    icon: <FiDatabase />,
+  },
+  {
+    title: "API Development",
+    desc: "Building secure, documented RESTful bridges. I ensure seamless data communication between your frontend, backend, and third-party integrations.",
+    tech: ["REST", "Webhooks", "JSON"],
+    icon: <FiServer />,
+  },
+  {
+    title: "Cloud & Security",
+    desc: "Hardening your application against vulnerabilities. I manage the full deployment lifecycle, from SSL implementation to automated cloud scaling.",
+    tech: ["AWS", "Auth0", "Docker"],
+    icon: <FiShield />,
+  },
+];
+
 export default function Services() {
   return (
-    <section
-      id="services"
-      className="py-16 bg-gray-50 min-h-screen flex flex-col justify-center"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title Section */}
-        <div className="text-center mb-12">
-          <h4 className="text-3xl font-semibold text-gray-900">Services</h4>
-          <hr className="w-16 h-1 mx-auto my-4 bg-blue-500 border-0 rounded" />
-          <p className="text-gray-600 text-lg">What I Do.</p>
+    <section id="services" className="py-32 bg-white relative overflow-hidden">
+      <div className="container mx-auto px-6 max-w-7xl relative z-10">
+        
+        {/* Section Header - Matching "Work." style */}
+        <div className="pt-10 pb-16 border-b border-slate-100 flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+          <h2 className="text-7xl md:text-9xl font-black text-slate-900 tracking-tighter">
+            Expertise<span className="text-blue-600">.</span>
+          </h2>
+          <p className="text-slate-400 font-medium max-w-[280px] mb-4 uppercase text-xs tracking-[0.3em] leading-relaxed">
+            A comprehensive suite of technical capabilities for the modern digital era.
+          </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          {/* UI/UX Design */}
-          <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-500 ease-in-out relative flex flex-col items-center text-center">
-            <div className="text-blue-500 mb-6 w-16 h-16">
-              {/* Icon */}
-              <svg className="w-16 h-16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path
-                  fill="currentColor"
-                  d="M204.3 5C104.9 24.3 38.2 110.3 38.2 210.7c0 66 38.5 123.3 98.9 150.4c0 0 0 0 0 0c6.8 3.5 10.8 11.2 10.5 19.4c-.3 7.8-6.7 14.3-14.5 14.3H102c-17.7 0-32 14.3-32 32c0 17.7 14.3 32 32 32h194.6c53.1 0 97.7-43.1 98-96.2c.3-59.7-44.4-108-99.4-108c-6.6 0-13-3.3-16.5-9.2c-2.4-3.9-3.5-8.4-3.2-12.9c.4-6.7 3.3-13.1 8.3-18c13.9-13.9 21.6-33.2 21.6-53.6c0-43.4-37.1-78.6-79.6-78.6c-8.2 0-16.4 1.6-24 4.8z"
-                />
-              </svg>
-            </div>
-            <h4 className="text-xl font-semibold mb-2">UI/UX Design</h4>
-            <p className="text-gray-600">
-              Designing intuitive user interfaces and seamless user experiences focused on performance, accessibility, and responsiveness.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-100 border border-slate-100 rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              className="group bg-white p-12 hover:bg-slate-50 transition-colors duration-500 relative overflow-hidden"
+            >
+              {/* Icon & Index */}
+              <div className="flex justify-between items-start mb-12">
+                <div className="text-4xl text-slate-900 group-hover:text-blue-600 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                  {service.icon}
+                </div>
+                <span className="text-6xl font-black text-slate-50 group-hover:text-blue-50 transition-colors">
+                  0{index + 1}
+                </span>
+              </div>
 
-          {/* Frontend Development */}
-          <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-500 ease-in-out relative flex flex-col items-center text-center">
-            <div className="text-blue-500 mb-6 w-16 h-16">
-              <svg className="w-16 h-16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                <path
-                  fill="currentColor"
-                  d="M288 288h64v32h-64zm256-176H96c-17.7 0-32 14.3-32 32v224H0v32h640v-32h-64V144c0-17.7-14.3-32-32-32zM96 352V160h448v192H96z"
-                />
-              </svg>
-            </div>
-            <h4 className="text-xl font-semibold mb-2">Frontend Development</h4>
-            <p className="text-gray-600">
-              Crafting dynamic and scalable frontends using React, Tailwind CSS, and modern UI libraries to deliver high-quality user interfaces.
-            </p>
-          </div>
+              <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">
+                {service.title}
+              </h3>
+              
+              <p className="text-slate-500 leading-relaxed mb-10 text-sm font-medium">
+                {service.desc}
+              </p>
 
-          {/* Backend + API Development */}
-          <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-500 ease-in-out relative flex flex-col items-center text-center">
-            <div className="text-blue-500 mb-6 w-16 h-16">
-              <svg className="w-16 h-16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                <path
-                  fill="currentColor"
-                  d="M64 64h512v128H64V64zm0 192h512v128H64V256zm0 192h512v32H64v-32z"
-                />
-              </svg>
-            </div>
-            <h4 className="text-xl font-semibold mb-2">Backend & API Development</h4>
-            <p className="text-gray-600">
-              Building secure and efficient backend services with Node.js, Python, and PHP. Integrating REST APIs, databases, and server-side logic.
-            </p>
-          </div>
+              {/* Tech Tags */}
+              <div className="flex flex-wrap gap-2">
+                {service.tech.map((t) => (
+                  <span key={t} className="px-3 py-1 bg-white border border-slate-100 text-slate-400 text-[9px] font-black uppercase tracking-widest rounded-md group-hover:border-blue-100 group-hover:text-blue-600 transition-colors">
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              {/* Hover Decorative Line */}
+              <div className="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 group-hover:w-full transition-all duration-700" />
+            </motion.div>
+          ))}
         </div>
+
+        {/* Minimal Bottom CTA */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="mt-24 text-center"
+        >
+          <div className="inline-block p-1 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+            <div className="px-12 py-10 rounded-[2.2rem] bg-white shadow-sm flex flex-col md:flex-row items-center gap-8">
+              <div className="text-left">
+                <h4 className="text-2xl font-black text-slate-900 tracking-tight">Have a specific requirement?</h4>
+                <p className="text-slate-400 text-sm font-medium uppercase tracking-widest">I am open to custom technical consultations.</p>
+              </div>
+              <motion.a
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                href="#contact"
+                className="px-10 py-5 bg-slate-900 text-white rounded-2xl font-black text-xs tracking-[0.2em] uppercase flex items-center gap-3 hover:bg-blue-600 transition-colors"
+              >
+                Start a conversation <FiArrowRight />
+              </motion.a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
